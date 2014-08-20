@@ -1,0 +1,9 @@
+Building Xuro
+
+See doc/readme-qt.rst for instructions on building Xuro QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Xuro.
+
+See doc/build-*.txt for instructions on building Xurod,
+the intended-for-services, no-graphical-interface, reference
+implementation of Xuro.
