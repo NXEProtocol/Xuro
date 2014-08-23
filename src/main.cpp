@@ -41,7 +41,7 @@ CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 16);
 
 unsigned int nTargetSpacing = 1 * 60; // 60 second blocks
-unsigned int nStakeMinAge = 24 * 60 * 60; // Min Stake: 1 Day
+unsigned int nStakeMinAge = 8 * 60 * 60; // Min Stake: 8 Hours
 unsigned int nStakeMaxAge = -1;          // Max Stake: Unlimited
 unsigned int nModifierInterval = 10 * 60; // Time before new modifier is computed
 
@@ -974,6 +974,18 @@ int64_t GetProofOfWorkReward(int64_t nFees)
             else if(pindexBest->nHeight < 100)
         {
             nSubsidy = 1 * COIN;
+        }
+			else if(pindexBest->nHeight < 4999)
+        {
+            nSubsidy = 95 * COIN;
+        }
+			else if(pindexBest->nHeight < 20159)
+        {
+            nSubsidy = 500 * COIN;
+        }
+		    else if(pindexBest->nHeight < 20160)
+        {
+            nSubsidy = 5000 * COIN;
         }
 	
     if (fDebug && GetBoolArg("-printcreation"))
