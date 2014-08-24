@@ -33,7 +33,8 @@ static const int DATABASE_VERSION = 91000;
 static const int PROTOCOL_VERSION = 91000;
 
 // earlier versions not supported as of Feb 2012, and are disconnected
-static const int MIN_PROTO_VERSION = 210;
+static const int INIT_PROTO_VERSION = 91000;
+static const int MIN_PROTO_VERSION = 91000;
 
 // disconnect from peers older than this proto version
 static const int MIN_PEER_PROTO_VERSION = 91000;
